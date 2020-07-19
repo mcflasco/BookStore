@@ -23,7 +23,8 @@ public class BookStoreApplication {
 			System.out.println("1: Employee");
 			System.out.println("2: Customer");
 			System.out.println("3: Books");
-			System.out.println("4: Exit");
+			System.out.println("4: Sales");
+			System.out.println("5: Exit");
 
 			String choice = input.nextLine();
 
@@ -41,6 +42,9 @@ public class BookStoreApplication {
 				break;
 				
 			case "4":
+				listSales();
+				break;
+			case "5":
 				System.out.println("Have a good day!");
 				menu = false;
 				break;
@@ -210,6 +214,8 @@ public class BookStoreApplication {
 
 	public static void getCustomer() {
 		for (Customer customer : bs.customers) {
+			/*Based on user signed in, This user will have access to current inventory, 
+			selection will be added to checkout Arraylist and will link to customer and item purchased */
 			System.out.println(customer);
 		}
 	}
@@ -223,6 +229,12 @@ public class BookStoreApplication {
 	public static void getBooks() {
 		for(Book book : bs.books) {
 			System.out.println(book);
+		}
+	}
+	
+	public static void listSales() {
+		for(int i = 0; i < bs.checkout.size(); i++) {
+			System.out.println(bs.checkout.get(i));
 		}
 	}
 	
