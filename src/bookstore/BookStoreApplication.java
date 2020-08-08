@@ -40,7 +40,7 @@ public class BookStoreApplication {
 			case "3":
 				getBooks();
 				break;
-				
+
 			case "4":
 				listSales();
 				break;
@@ -48,7 +48,7 @@ public class BookStoreApplication {
 				System.out.println("Have a good day!");
 				menu = false;
 				break;
-				
+
 			}
 		}
 	}
@@ -76,7 +76,7 @@ public class BookStoreApplication {
 		boolean employeeMenu = true;
 
 		while (employeeMenu) {
-			
+
 			System.out.println("==== Employee Data ====");
 			System.out.println("1: List employees");
 			System.out.println("2: Add employee");
@@ -84,7 +84,7 @@ public class BookStoreApplication {
 			System.out.println("4: Remove employee");
 			System.out.println("==== Customer Data ====");
 			System.out.println("8: Exit");
-			
+
 			String choice = input.nextLine();
 
 			switch (choice) {
@@ -106,7 +106,7 @@ public class BookStoreApplication {
 				break;
 
 			case "8":
-				employeeMenu = false;	
+				employeeMenu = false;
 				break;
 			}
 		}
@@ -214,35 +214,33 @@ public class BookStoreApplication {
 
 	public static void getCustomer() {
 		for (Customer customer : bs.customers) {
-			/*Based on user signed in, This user will have access to current inventory, 
-			selection will be added to checkout Arraylist and will link to customer and item purchased */
 			System.out.println(customer);
 		}
 	}
 
-	public static void addCustomer() {
-
+	public static void addCustomer() {	
+		
+		System.out.println("test");
 	}
-	
-	// Inventory Functionality =======================================================================================
-	
+
+	// Inventory Functionality
+	// =======================================================================================
+
 	public static void getBooks() {
-		for(Book book : bs.books) {
+		for (Book book : bs.books) {
 			System.out.println(book);
 		}
 	}
-	
+
+	/*
+	 * Based on user signed in, This user will have access to current inventory,
+	 * selection will be added to checkout Arraylist and will link to customer and
+	 * item purchased
+	 */
 	public static void listSales() {
-		for(int i = 0; i < bs.checkout.size(); i++) {
+		for (int i = 0; i < bs.checkout.size(); i++) {
 			System.out.println(bs.checkout.get(i));
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
