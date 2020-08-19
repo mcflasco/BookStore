@@ -12,8 +12,8 @@ public class Database {
 		try {
 			String driver = "com.mysql.jdbc.Driver";
 			String url = "jdbc:mysql://localhost:3306/bookstore";
-			String username = "root";
-			String password = "root";
+			String username = "";
+			String password = "";
 			
 			Class.forName(driver);
 			
